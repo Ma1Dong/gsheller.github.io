@@ -6,7 +6,7 @@
   <link href="http://www.gsheller.top/atom.xml" rel="self"/>
   
   <link href="http://www.gsheller.top/"/>
-  <updated>2021-08-05T09:23:32.295Z</updated>
+  <updated>2021-08-09T01:41:09.118Z</updated>
   <id>http://www.gsheller.top/</id>
   
   <author>
@@ -18,17 +18,17 @@
   
   <entry>
     <title>域渗透_netlogon1472直取域控</title>
-    <link href="http://www.gsheller.top/2021/05/05/%E5%9F%9F%E6%B8%97%E9%80%8F-netlogon1472%E7%9B%B4%E5%8F%96%E5%9F%9F%E6%8E%A7/"/>
-    <id>http://www.gsheller.top/2021/05/05/%E5%9F%9F%E6%B8%97%E9%80%8F-netlogon1472%E7%9B%B4%E5%8F%96%E5%9F%9F%E6%8E%A7/</id>
-    <published>2021-05-05T02:03:44.000Z</published>
-    <updated>2021-08-05T09:23:32.295Z</updated>
+    <link href="http://www.gsheller.top/2021/05/17/%E5%9F%9F%E6%B8%97%E9%80%8F-netlogon1472%E7%9B%B4%E5%8F%96%E5%9F%9F%E6%8E%A7/"/>
+    <id>http://www.gsheller.top/2021/05/17/%E5%9F%9F%E6%B8%97%E9%80%8F-netlogon1472%E7%9B%B4%E5%8F%96%E5%9F%9F%E6%8E%A7/</id>
+    <published>2021-05-17T02:03:44.000Z</published>
+    <updated>2021-08-09T01:41:09.118Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="免杀上线-变形shellcode，c混淆加载免杀"><a href="#免杀上线-变形shellcode，c混淆加载免杀" class="headerlink" title="免杀上线_变形shellcode，c混淆加载免杀"></a>免杀上线_变形shellcode，c混淆加载免杀</h4><h5 id="变形shellcode"><a href="#变形shellcode" class="headerlink" title="变形shellcode"></a>变形shellcode</h5><p>通过异或，添加随机字符，等来变形shellcode</p><p><img src="/2021/05/05/%E5%9F%9F%E6%B8%97%E9%80%8F-netlogon1472%E7%9B%B4%E5%8F%96%E5%9F%9F%E6%8E%A7/huanjing\github\Hexo\source_posts\域渗透-netlogon1472直取域控\image-20210805135301427.png" alt="image-20210805135301427"></p><h5 id="c还原加载"><a href="#c还原加载" class="headerlink" title="c还原加载"></a>c还原加载</h5><img src="/2021/05/05/%E5%9F%9F%E6%B8%97%E9%80%8F-netlogon1472%E7%9B%B4%E5%8F%96%E5%9F%9F%E6%8E%A7/2.jpg" width="1000"><h5 id="免杀效果"><a href="#免杀效果" class="headerlink" title="免杀效果"></a>免杀效果</h5><img src="/2021/05/05/%E5%9F%9F%E6%B8%97%E9%80%8F-netlogon1472%E7%9B%B4%E5%8F%96%E5%9F%9F%E6%8E%A7/3.jpg" width="1000"><h5 id="执行上线"><a href="#执行上线" class="headerlink" title="执行上线"></a>执行上线</h5><img src="/2021/05/05/%E5%9F%9F%E6%B8%97%E9%80%8F-netlogon1472%E7%9B%B4%E5%8F%96%E5%9F%9F%E6%8E%A7/3.jpg" width="1000">]]></content>
+    <content type="html"><![CDATA[<h5 id="域渗透-netlogon1472直取域控"><a href="#域渗透-netlogon1472直取域控" class="headerlink" title="域渗透_netlogon1472直取域控"></a>域渗透_netlogon1472直取域控</h5><p>前期拿到入口和域用户机器权限略过。</p><p>检测域控是否存在漏洞</p><p><img src="/2021/05/17/%E5%9F%9F%E6%B8%97%E9%80%8F-netlogon1472%E7%9B%B4%E5%8F%96%E5%9F%9F%E6%8E%A7/huanjing\github\Hexo\source_posts\域渗透-netlogon1472直取域控\image-20210806113337772.png" alt="image-20210806113337772"></p><p>将域控密码置为空</p><p><img src="/2021/05/17/%E5%9F%9F%E6%B8%97%E9%80%8F-netlogon1472%E7%9B%B4%E5%8F%96%E5%9F%9F%E6%8E%A7/huanjing\github\Hexo\source_posts\域渗透-netlogon1472直取域控\image-20210806113434873.png" alt="image-20210806113434873"></p><p>利用空密码导出所有用户hash</p><p><img src="/2021/05/17/%E5%9F%9F%E6%B8%97%E9%80%8F-netlogon1472%E7%9B%B4%E5%8F%96%E5%9F%9F%E6%8E%A7/huanjing\github\Hexo\source_posts\域渗透-netlogon1472直取域控\image-20210806142823841.png" alt="image-20210806142823841"></p><p>hash传递获取域控shell</p><p><img src="/2021/05/17/%E5%9F%9F%E6%B8%97%E9%80%8F-netlogon1472%E7%9B%B4%E5%8F%96%E5%9F%9F%E6%8E%A7/huanjing\github\Hexo\source_posts\域渗透-netlogon1472直取域控\image-20210806143126479.png" alt="image-20210806143126479"></p><p>域内机器</p><p><img src="/2021/05/17/%E5%9F%9F%E6%B8%97%E9%80%8F-netlogon1472%E7%9B%B4%E5%8F%96%E5%9F%9F%E6%8E%A7/huanjing\github\Hexo\source_posts\域渗透-netlogon1472直取域控\image-20210809093936516.png" alt="image-20210809093936516"></p><p>登录域控</p><p><img src="/2021/05/17/%E5%9F%9F%E6%B8%97%E9%80%8F-netlogon1472%E7%9B%B4%E5%8F%96%E5%9F%9F%E6%8E%A7/huanjing\github\Hexo\source_posts\域渗透-netlogon1472直取域控\image-20210806143942162.png" alt="image-20210806143942162"></p><p>域内机器794台</p><p><img src="/2021/05/17/%E5%9F%9F%E6%B8%97%E9%80%8F-netlogon1472%E7%9B%B4%E5%8F%96%E5%9F%9F%E6%8E%A7/huanjing\github\Hexo\source_posts\域渗透-netlogon1472直取域控\image-20210806144351632.png" alt="image-20210806144351632"></p><h5 id="还原域控账号密码"><a href="#还原域控账号密码" class="headerlink" title="还原域控账号密码"></a>还原域控账号密码</h5><p>pth，dump文件。</p><p><img src="/2021/05/17/%E5%9F%9F%E6%B8%97%E9%80%8F-netlogon1472%E7%9B%B4%E5%8F%96%E5%9F%9F%E6%8E%A7/huanjing\github\Hexo\source_posts\域渗透-netlogon1472直取域控\image-20210806161228363.png" alt="image-20210806161228363"></p><p>获取域控机器上原来的 Ntlm Hash 值，ACC值</p><p><img src="/2021/05/17/%E5%9F%9F%E6%B8%97%E9%80%8F-netlogon1472%E7%9B%B4%E5%8F%96%E5%9F%9F%E6%8E%A7/huanjing\github\Hexo\source_posts\域渗透-netlogon1472直取域控\image-20210809093435983.png" alt="image-20210809093435983"></p><p>还原密码即可。</p><p><img src="/2021/05/17/%E5%9F%9F%E6%B8%97%E9%80%8F-netlogon1472%E7%9B%B4%E5%8F%96%E5%9F%9F%E6%8E%A7/huanjing\github\Hexo\source_posts\域渗透-netlogon1472直取域控\image-20210809093535846.png" alt="image-20210809093535846"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h4 id=&quot;免杀上线-变形shellcode，c混淆加载免杀&quot;&gt;&lt;a href=&quot;#免杀上线-变形shellcode，c混淆加载免杀&quot; class=&quot;headerlink&quot; title=&quot;免杀上线_变形shellcode，c混淆加载免杀&quot;&gt;&lt;/a&gt;免杀上线_变形shellco</summary>
+    <summary type="html">&lt;h5 id=&quot;域渗透-netlogon1472直取域控&quot;&gt;&lt;a href=&quot;#域渗透-netlogon1472直取域控&quot; class=&quot;headerlink&quot; title=&quot;域渗透_netlogon1472直取域控&quot;&gt;&lt;/a&gt;域渗透_netlogon1472直取域控&lt;/h5&gt;&lt;</summary>
       
     
     
